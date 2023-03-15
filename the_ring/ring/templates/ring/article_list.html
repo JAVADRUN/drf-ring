@@ -1,0 +1,13 @@
+{% extends 'ring/base.html' %}
+{% block main %}
+    {% for article in object_list %}
+      
+    <h2>{{article.title}}</h2>
+    <h3>{{article.author}}</h3>
+    <p>{{article.content}}</p>
+    {{article.publish}}
+
+    {% empty %}
+    {% endfor %}
+            
+{% endblock main %}
